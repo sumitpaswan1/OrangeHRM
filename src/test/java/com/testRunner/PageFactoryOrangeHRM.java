@@ -1,6 +1,5 @@
 package com.testRunner;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -71,7 +70,7 @@ public class PageFactoryOrangeHRM {
 	@FindBy(xpath="//form[@class='oxd-form']/div[3]/button[2]")
 	public WebElement search;
 	
-	@FindBy(xpath="//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[2]/div[2]/div/div/div[1]/div/div/div[2]/div/div/button[1]")
+	@FindBy(xpath="//button[text()=' Approve ']")
 	public WebElement approve;
 	
 	
@@ -112,7 +111,7 @@ public class PageFactoryOrangeHRM {
 	
 	//add entitlements
 	
-	@FindBy(xpath="//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/form/div[2]/div/div/div/div[2]/div/div/input")
+	@FindBy(xpath="//input[@placeholder='Type for hints...']")
 	public WebElement emp_name1;
 	
 	@FindBy(xpath="//form[@class='oxd-form']/div[3]/div/div[1]/div/div[2]/div/div/div[1]")
@@ -138,7 +137,7 @@ public class PageFactoryOrangeHRM {
 	public WebElement emp_entitlements;
 	
 	
-	@FindBy(xpath="//form[@class='oxd-form']/div[1]/div/div[1]/div/div[2]/div/div/input")
+	@FindBy(xpath="//input[@placeholder='Type for hints...']")
 	public WebElement empName;
 	
 	@FindBy(xpath="//form[@class='oxd-form']/div[1]/div/div[1]/div/div[2]/div/div/input")
@@ -156,7 +155,7 @@ public class PageFactoryOrangeHRM {
 	@FindBy(xpath="//nav[@class='oxd-topbar-body-nav']/ul/li[7]/a")
 	public WebElement assign;
 	
-	@FindBy(xpath="//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/form/div[1]/div/div/div/div[2]/div/div/input")
+	@FindBy(xpath="//input[@placeholder='Type for hints...']")
 	public WebElement empN;
 	@FindBy(xpath="//form[@class='oxd-form']/div[2]/div/div[1]/div/div[2]/div/div/div[1]")
 	public WebElement lt;
@@ -164,7 +163,7 @@ public class PageFactoryOrangeHRM {
 	public WebElement fdate;
 	@FindBy(xpath="//form[@class='oxd-form']/div[3]/div/div[2]/div/div[2]/div/div/input")
 	public WebElement ldate;
-	@FindBy(xpath="//form[@class='oxd-form']/div[5]/button")
+	@FindBy(xpath="//button[text()=' Assign ']")
 	public WebElement assign_button;
 	
 	
@@ -523,4 +522,11 @@ public class PageFactoryOrangeHRM {
 		Thread.sleep(2000);
 		assign_button.click();
 	}
+	
+	public void clearField(WebElement ele) throws InterruptedException {
+		ele.click();
+		ele.sendKeys(Keys.CONTROL+"a");
+		ele.sendKeys(Keys.DELETE);
+		Thread.sleep(2000);
+		}
 }

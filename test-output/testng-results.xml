@@ -1,91 +1,143 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-03-03T21:15:00 IST" name="Default suite" finished-at="2023-03-03T21:16:40 IST" duration-ms="99970">
+  <suite started-at="2023-03-04T12:55:07 IST" name="Suite" finished-at="2023-03-04T13:00:24 IST" duration-ms="316973">
     <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.testRunner.Leave@43df23d3]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
     </groups>
-    <test started-at="2023-03-03T21:15:00 IST" name="Default test" finished-at="2023-03-03T21:16:40 IST" duration-ms="99970">
-      <class name="com.testRunner.FactoryHRM">
-        <test-method signature="logintestO()[pri:0, instance:com.testRunner.FactoryHRM@55a147cc]" started-at="2023-03-03T21:15:00 IST" name="logintestO" finished-at="2023-03-03T21:16:40 IST" duration-ms="99923" status="FAIL">
-          <exception class="org.openqa.selenium.ElementClickInterceptedException">
-            <message>
-              <![CDATA[element click intercepted: Element <div class="oxd-select-text-input" tabindex="0" data-v-5df604d8="">...</div> is not clickable at point (447, 417). Other element would receive the click: <div role="option" class="oxd-autocomplete-option" data-v-3af0b322="" data-v-25234c09="">...</div>
-  (Session info: chrome=110.0.5481.178)
-Build info: version: '4.7.2', revision: '4d4020c3b7'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [4ab42f948e0512ac3be8293355accd08, clickElement {id=6fbbe283-86e3-4833-9285-7bcc82bfe9d9}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.178, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: C:\Program Files (x86)\scop...}, goog:chromeOptions: {debuggerAddress: localhost:52232}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52232/devtoo..., se:cdpVersion: 110.0.5481.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on WINDOWS (4ab42f948e0512ac3be8293355accd08)] -> xpath: //form[@class='oxd-form']/div[3]/div/div[1]/div/div[2]/div/div/div[1]]
-Session ID: 4ab42f948e0512ac3be8293355accd08]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <div class="oxd-select-text-input" tabindex="0" data-v-5df604d8="">...</div> is not clickable at point (447, 417). Other element would receive the click: <div role="option" class="oxd-autocomplete-option" data-v-3af0b322="" data-v-25234c09="">...</div>
-  (Session info: chrome=110.0.5481.178)
-Build info: version: '4.7.2', revision: '4d4020c3b7'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [4ab42f948e0512ac3be8293355accd08, clickElement {id=6fbbe283-86e3-4833-9285-7bcc82bfe9d9}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.178, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: C:\Program Files (x86)\scop...}, goog:chromeOptions: {debuggerAddress: localhost:52232}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52232/devtoo..., se:cdpVersion: 110.0.5481.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on WINDOWS (4ab42f948e0512ac3be8293355accd08)] -> xpath: //form[@class='oxd-form']/div[3]/div/div[1]/div/div[2]/div/div/div[1]]
-Session ID: 4ab42f948e0512ac3be8293355accd08
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:535)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
-at jdk.internal.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
-at jdk.proxy2/jdk.proxy2.$Proxy14.click(Unknown Source)
-at com.testRunner.PageFactoryOrangeHRM.user_select_the_all_the_mandatory_fields(PageFactoryOrangeHRM.java:399)
-at com.testRunner.FactoryHRM.logintestO(FactoryHRM.java:35)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:829)
-at org.testng.TestRunner.run(TestRunner.java:602)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+    <test started-at="2023-03-04T12:55:07 IST" name="Test" finished-at="2023-03-04T13:00:24 IST" duration-ms="316973">
+      <class name="com.testRunner.Leave">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.testRunner.Leave@43df23d3]" started-at="2023-03-04T12:55:07 IST" name="setUpClass" finished-at="2023-03-04T12:55:07 IST" duration-ms="229" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@54495935]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- logintestO -->
-      </class> <!-- com.testRunner.FactoryHRM -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- setUpClass -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.testRunner.Leave@43df23d3]" started-at="2023-03-04T12:55:07 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-03-04T12:55:59 IST" duration-ms="51904" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Search leave list with correct input"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Leave module functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.testRunner.Leave@43df23d3]" started-at="2023-03-04T12:55:59 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-03-04T12:56:43 IST" duration-ms="44113" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["view the Apply for the leave"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Leave module functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.testRunner.Leave@43df23d3]" started-at="2023-03-04T12:56:43 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-03-04T12:57:33 IST" duration-ms="49810" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["View my leave"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Leave module functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.testRunner.Leave@43df23d3]" started-at="2023-03-04T12:57:33 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-03-04T12:58:02 IST" duration-ms="29448" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["View my leave entitlements"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Leave module functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.testRunner.Leave@43df23d3]" started-at="2023-03-04T12:58:02 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-03-04T12:58:49 IST" duration-ms="46127" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Add leave entitlements for an employee"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Leave module functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.testRunner.Leave@43df23d3]" started-at="2023-03-04T12:58:49 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-03-04T12:59:32 IST" duration-ms="43378" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["View leave entitlements for an employeee"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Leave module functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.testRunner.Leave@43df23d3]" started-at="2023-03-04T12:59:32 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-03-04T13:00:24 IST" duration-ms="51909" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Assign leave to an employee"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Leave module functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.testRunner.Leave@43df23d3]" started-at="2023-03-04T13:00:24 IST" name="tearDownClass" finished-at="2023-03-04T13:00:24 IST" duration-ms="8" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- com.testRunner.Leave -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

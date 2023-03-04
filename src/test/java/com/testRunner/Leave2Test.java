@@ -1,9 +1,15 @@
 package com.testRunner;
 
+import org.junit.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.Test;
 
 public class Leave2Test {
 
+	WebDriver driver = null;
   @Test
   public void i_click_on_the_Save_buttonTest() {
     throw new RuntimeException("Test not implemented");
@@ -130,8 +136,11 @@ public class Leave2Test {
   }
 
   @Test
-  public void user_click_on_the_Leave_module_in_the_left_navigation_menuTest() {
+  public void user_click_on_the_Leave_module_in_the_left_navigation_menuTest() {   //3
     throw new RuntimeException("Test not implemented");
+    
+	String myLeave = driver.findElement(By.xpath("//ul[@class='oxd-main-menu']/li[3]/a/span")).getText();
+	Assert.assertEquals(myLeave, "Leave");
   }
 
   @Test
@@ -190,8 +199,14 @@ public class Leave2Test {
   }
 
   @Test
-  public void user_enter_valid_credentials_and_click_LoginTest() {
+  public void user_enter_valid_credentials_and_click_LoginTest() {     // 2nd
     throw new RuntimeException("Test not implemented");
+    
+	 PageFactoryOrangeHRM pf = new PageFactoryOrangeHRM(driver);
+	 pf.uname.sendKeys("Admin");
+	 pf.pwd.sendKeys("admin123");
+	 pf.btn.click();
+	 Thread.sleep(3000);
   }
 
   @Test
@@ -220,8 +235,17 @@ public class Leave2Test {
   }
 
   @Test
-  public void user_on_the_OrangeHRM_login_pageTest() {
-    throw new RuntimeException("Test not implemented");
+  public void user_on_the_OrangeHRM_login_pageTest() throws InterruptedException {    //1
+    //throw new RuntimeException("Test not implemented");
+	  
+		 System.setProperty("Webdriver.chrome.driver", "C:\\drivers\\chromedriver.exe");
+		 ChromeOptions options = new ChromeOptions();
+		 options.addArguments("start-maximized");
+		 driver = new ChromeDriver(options);
+		 driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+		 Thread.sleep(4000);
+		 String title = driver.getTitle();
+		 Assert.assertEquals(title, "OrangeHRM");
   }
 
   @Test
@@ -285,12 +309,19 @@ public class Leave2Test {
   }
 
   @Test
-  public void user_should_be_redirected_to_the_Leave_module_pageTest() {
-    throw new RuntimeException("Test not implemented");
+  public void user_should_be_redirected_to_the_Leave_module_pageTest() {           //4
+    //throw new RuntimeException("Test not implemented");
+    
+	String myLeave = driver.findElement(By.xpath("//nav[@class='oxd-topbar-body-nav']/ul/li[6]/a")).getText();
+	Assert.assertEquals(myLeave, "Leave");
   }
 
   @Test
-  public void user_should_see_the_dashboardTest() {
-    throw new RuntimeException("Test not implemented");
+  public void user_should_see_the_dashboardTest() {                     // 3
+    //throw new RuntimeException("Test not implemented");
+    
+    
+	 String dashboard = driver.findElement(By.xpath("//span[@class='oxd-topbar-header-breadcrumb']/h6")).getText();
+	 Assert.assertEquals(dashboard, "Dashboard");
   }
 }
